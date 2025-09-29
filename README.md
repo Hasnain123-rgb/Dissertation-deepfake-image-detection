@@ -27,8 +27,6 @@ The following diagram illustrates the complete deepfake detection pipeline — f
 
 
 ---
-
-
 ##  Repository Structure
 
 The repository is organized by model architecture. Each folder contains Jupyter notebooks for training and evaluating deepfake detection models with different augmentation strategies.
