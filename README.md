@@ -28,20 +28,14 @@ The following diagram illustrates the complete deepfake detection pipeline — f
 
 ---
 
+
 ##  Repository Structure
 
 The repository is organized by model architecture. Each folder contains Jupyter notebooks for training and evaluating deepfake detection models with different augmentation strategies.
 
-Dissertation-deepfake-image-detection/
-│
-├── ResNet50/
-├── ConvNeXt/
-├── Vision Transformer (ViT)/
-├── EfficientNet/
-├── Swin Transformer/
-├── Figures/
-└── README.md
+
 
 
 Each model folder includes multiple `.ipynb` files — one for each augmentation strategy (e.g., Compression, MixMo, Frequency Transform, etc.).
+
 
