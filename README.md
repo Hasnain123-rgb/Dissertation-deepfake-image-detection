@@ -7,3 +7,20 @@ We use 5 popular **baseline architectures** — including both **CNNs** and **Tr
 Models are evaluated on **CelebDF-v2** and **WildDeepfake**, which represent challenging cross-domain testing conditions.
 
 In addition to classification metrics like **AUC**, **Accuracy**, and **EER**, we use **Grad-CAM visualizations** to understand how attention maps shift depending on augmentation strategy.
+
+
+---
+
+##  Project Pipeline Overview
+
+The following diagram illustrates the complete deepfake detection pipeline — from input preprocessing and augmentation to model inference and evaluation:
+
+![Model Pipeline Overview](Figures/model_pipeline_overview.png)
+
+**Figure:** *Pipeline stages include:*
+- Batch of input face images
+- Resizing and normalization
+- Application of a selected augmentation strategy
+- Feature extraction using one of the baseline models
+- Prediction (Real/Fake)
+- Evaluation via AUC, ROC curves, confusion matrices, and training curves
