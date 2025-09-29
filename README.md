@@ -55,3 +55,27 @@ Each model folder includes multiple `.ipynb` files — one for each augmentation
 
 ---
 
+---
+
+##  Augmentations Used
+
+This project evaluates the impact of the following **11 image augmentations**, grouped by the type of transformation they apply to the training data:
+
+| Category               | Techniques                                                  |
+|------------------------|-------------------------------------------------------------|
+| Baseline               | No Augmentation                                             |
+| Compression-Based      | JPEG Compression                                            |
+| Color-Based            | Color Transform                                             |
+| Frequency-Based        | Frequency Transform                                         |
+| Occlusion-Based        | Hide & Seek                                                 |
+| Patch-Based            | Gridmask, Random Mix                                        |
+| Mix-Based              | SnapMix, MixMo (α=1), MixMo (α=2)                           |
+| Spatial-Based          | YoCo (You Only Cut Once)                                    |
+
+> Each augmentation was applied independently to evaluate its impact on model accuracy, robustness, and generalization across datasets.
+
+### Augmentation Visuals
+
+The figure below illustrates how different augmentation strategies modify the input face images:
+
+![Augmentation Examples](Figures/augmentation_visuals.png)
