@@ -25,9 +25,6 @@ The following diagram illustrates the complete deepfake detection pipeline — f
 - Prediction (Real/Fake)
 - Evaluation via AUC, ROC curves, confusion matrices, and training curves
 
-
----
-
 ---
 
 ##  Repository Structure
@@ -46,6 +43,8 @@ Dissertation-deepfake-image-detection/
 ├── Figures/
 └── README.md
 
+
 Each model folder includes multiple `.ipynb` files — one for each augmentation strategy (e.g., Compression, MixMo, Frequency Transform, etc.).
 
+---
 
