@@ -34,6 +34,7 @@ The repository is organized by model architecture. Each folder contains Jupyter 
 
 
 Dissertation-deepfake-image-detection/
+
 │
 ├── ResNet50/
 
