@@ -96,3 +96,19 @@ The project evaluates five baseline models representing both CNN and Transformer
 | Swin Transformer V2   | Transformer    | Shifted window attention, hierarchical design        | 86,907,898       | 2,050                 |
 
 > All models use **frozen backbones** with **binary trainable heads** to isolate the effect of augmentations during fine-tuning.
+
+
+---
+
+##  Datasets Used
+
+The following datasets were used to train and evaluate the deepfake detection models. All datasets maintain a **1:1 ratio of real and fake images** for balanced training and testing.
+
+| Dataset         | Training Images | Validation Images | Testing Images | Total Images | Real:Fake Ratio |
+|------------------|------------------|--------------------|----------------|---------------|------------------|
+| FFHQ             | 171,712          | 33,472             | 33,312         | 238,496       | 1:1              |
+| CelebDF-V2       | –                | –                  | 15,232         | 15,232        | 1:1              |
+| WildDeepfake     | –                | –                  | 71,840         | 71,840        | 1:1              |
+
+>  **FFHQ** was used for training, validation, and in-domain testing.  
+>  **CelebDF-V2** and **WildDeepfake** were used exclusively for **cross-domain testing**.
