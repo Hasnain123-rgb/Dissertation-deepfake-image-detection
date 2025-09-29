@@ -79,3 +79,20 @@ This project evaluates the impact of the following **11 image augmentations**, g
 The figure below illustrates how different augmentation strategies modify the input face images:
 
 ![Augmentation Examples](Figures/augmentation_visuals.png)
+
+
+---
+
+##  Models Used
+
+The project evaluates five baseline models representing both CNN and Transformer-based architectures. Each model was pretrained on ImageNet and fine-tuned on the FFHQ dataset using different augmentations.
+
+| Model                 | Type           | Key Features                                         | Total Parameters | Trainable Parameters |
+|-----------------------|----------------|------------------------------------------------------|------------------|-----------------------|
+| ResNet-50             | CNN            | Residual connections, deep hierarchical features     | 23,512,130       | 4,098                 |
+| ConvNeXt V2-Base      | Modern CNN     | ConvNeXt blocks, depthwise convolutions              | 87,692,802       | 2,050                 |
+| Vision Transformer    | Transformer    | Patch embedding, self-attention                      | 85,800,194       | 1,538                 |
+| EfficientNet-B0       | Scalable CNN   | Compound scaling (depth, width, resolution)          | 4,010,110        | 2,562                 |
+| Swin Transformer V2   | Transformer    | Shifted window attention, hierarchical design        | 86,907,898       | 2,050                 |
+
+> All models use **frozen backbones** with **binary trainable heads** to isolate the effect of augmentations during fine-tuning.
