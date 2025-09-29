@@ -112,3 +112,28 @@ The following datasets were used to train and evaluate the deepfake detection mo
 
 >  **FFHQ** was used for training, validation, and in-domain testing.  
 >  **CelebDF-V2** and **WildDeepfake** were used exclusively for **cross-domain testing**.
+
+
+---
+
+##  Training Configuration
+
+All models were trained using the same configuration to ensure fair comparison across augmentations and architectures:
+
+| Component             | Configuration Details                                 |
+|------------------------|------------------------------------------------------|
+| Dataset Split          | FFHQ: 80% training, 10% validation, 10% testing      |
+| Optimizer              | Adam                                                 |
+| Initial Learning Rate  | 0.0001                                               |
+| Scheduler              | Gamma decay = 0.1 every 5 epochs                     |
+| Loss Function          | Cross-Entropy Loss                                   |
+| Early Stopping         | Patience = 5 (based on validation loss)              |
+| Batch Size             | 32                                                   |
+| Epochs                 | 100                                                  |
+| Logging                | TensorBoard (`SummaryWriter`)                        |
+| Model Saving           | `torch.save()` — best model based on val accuracy    |
+| Evaluation Metrics     | Accuracy, ROC AUC, EER, F1 Score, Confusion Matrix   |
+| Interpretability       | Grad-CAM (`pytorch-grad-cam`)                        |
+| Test Datasets          | CelebDF-V2, WildDeepfake (cross-dataset evaluation)  |
+
+> Each model uses a **frozen backbone** and **trainable head** to evaluate augmentation effects without retraining full networks.
