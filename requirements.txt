@@ -1,0 +1,11 @@
+torch
+torchvision
+pandas
+matplotlib
+scikit-learn
+seaborn
+tensorboard
+pillow
+fvcore
+grad-cam
+tensorflow
