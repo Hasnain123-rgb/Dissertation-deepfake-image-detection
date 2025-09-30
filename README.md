@@ -222,4 +222,14 @@ This visualization compares how different models attend to manipulated regions i
 >  This highlights differences in spatial bias and generalization strategies between architectures.
 
 
+---
+
+##  Key Takeaways
+
+-  **Vision Transformer (ViT)** achieved the best performance in **cross-dataset validation**, especially when trained with **Compression augmentation**.
+-  On the **in-domain dataset (FFHQ)**, **ConvNeXt** consistently outperformed other models across most augmentations.
+-  **Color Transform** was the least effective augmentation — most models failed to generalize well when trained under this strategy.
+-  Augmentations like `RandomMix`, `MixMo`, and `Hide & Seek` also provided strong in-domain results and balanced trade-offs across datasets.
+-  Grad-CAM visualizations revealed that **Transformers** attended more broadly to facial regions, while **CNNs** focused locally, particularly on texture and edges.
+
 
