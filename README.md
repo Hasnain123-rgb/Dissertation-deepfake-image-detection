@@ -137,3 +137,21 @@ All models were trained using the same configuration to ensure fair comparison a
 | Test Datasets          | CelebDF-V2, WildDeepfake (cross-dataset evaluation)  |
 
 > Each model uses a **frozen backbone** and **trainable head** to evaluate augmentation effects without retraining full networks.
+
+---
+
+##  Evaluation Metrics
+
+The following metrics were used to evaluate model performance across both in-domain (FFHQ) and cross-domain (CelebDF-V2, WildDeepfake) datasets:
+
+- **Accuracy** – Overall correct predictions (real/fake)
+- **ROC AUC (Area Under Curve)** – Measures discrimination threshold
+- **EER (Equal Error Rate)** – Point where false acceptance = false rejection
+- **F1 Score** – Harmonic mean of precision and recall
+- **Confusion Matrix** – Detailed class-wise performance breakdown
+- **Grad-CAM Visualizations** – Model interpretability via activation maps
+
+>  All metrics were calculated for each augmentation-model combination to assess both accuracy and generalization performance.
+
+
+
