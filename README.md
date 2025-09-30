@@ -204,7 +204,7 @@ Below are examples of input images and predictions for the **best** and **worst*
 
 Grad-CAM highlights areas the models attend to when classifying deepfakes.
 
-![GradCAM Examples](Figures/gradcam_examples.jpeg)
+![GradCAM Examples](Figures/gradcam_examples.png)
 
 >  Vision Transformer and MobileNet show more distributed attention than CNNs, focusing on manipulation-prone regions (e.g., eyes, mouth).
 
@@ -215,7 +215,7 @@ Grad-CAM highlights areas the models attend to when classifying deepfakes.
 
 This visualization compares how different models attend to manipulated regions in deepfake images.
 
-![Grad-CAM by Model](Figures/gradcam_by_model.png)
+![Grad-CAM by Model](Figures/gradcam_by_model.png))
 
 >  **CNNs** like ResNet50 and EfficientNet focus more on local texture and edges.  
 >  **Transformers** like ViT and Swin Transformer show broader and more distributed attention across facial regions.  
