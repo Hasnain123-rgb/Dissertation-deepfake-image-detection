@@ -233,3 +233,11 @@ This visualization compares how different models attend to manipulated regions i
 -  Grad-CAM visualizations revealed that **Transformers** attended more broadly to facial regions, while **CNNs** focused locally, particularly on texture and edges.
 
 
+---
+
+##  Author
+
+**Hasnain Umar**  
+MSc Data Science – Kingston University London  
+GitHub: [@Hasnain123-rgb](https://github.com/Hasnain123-rgb)  
+Email: hasnainshaikh372@gmail.com
