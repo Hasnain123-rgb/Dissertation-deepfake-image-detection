@@ -154,4 +154,72 @@ The following metrics were used to evaluate model performance across both in-dom
 >  All metrics were calculated for each augmentation-model combination to assess both accuracy and generalization performance.
 
 
+---
+
+##  Results & Visualizations
+
+This section summarizes key outcomes across datasets and models using AUC scores, Grad-CAM visualizations, and confusion matrices.
+
+> All experiments were performed using a frozen backbone and binary trainable head setup, with one augmentation applied per training run.
+
+---
+
+###  AUC Scores on FFHQ (In-Domain)
+
+The heatmap below shows how different augmentations affect model AUC when evaluated on the FFHQ test set:
+
+![FFHQ AUC Heatmap](Figures/ffhq_auc_heatmap.png)
+
+>  Augmentations like `No-Augmentation`, `Mixmo(alpha=1)`, and `RandomMix` consistently perform well in-domain.
+
+
+
+---
+
+###  AUC Scores on CelebDF-V2 & WildDeepfake (Cross-Domain)
+
+These heatmaps visualize model generalization when tested on unseen datasets:
+
+![CelebDF AUC Heatmap](Figures/celebdf_auc_heatmap.png)
+![WildDeepfake AUC Heatmap](Figures/wilddeepfake_auc_heatmap.png)
+
+>  Compression-based augmentations improved generalization across all models, especially Vision Transformer.
+
+---
+
+###  Best vs. Worst Augmentation Samples
+
+Below are examples of input images and predictions for the **best** and **worst** performing augmentations:
+
+![Best vs Worst Augmentation](Figures/best_vs_worst_augmentation.png)
+
+>  The best augmentation (`Compression` ) improves localization of artifacts.  
+>  The worst (e.g., `Color Transform`) fails to guide model attention effectively.
+
+
+
+---
+
+###  Grad-CAM Visualizations
+
+Grad-CAM highlights areas the models attend to when classifying deepfakes.
+
+![GradCAM Examples](Figures/gradcam_examples.jpeg)
+
+>  Vision Transformer and MobileNet show more distributed attention than CNNs, focusing on manipulation-prone regions (e.g., eyes, mouth).
+
+
+---
+
+###  Grad-CAM Comparison Across Models
+
+This visualization compares how different models attend to manipulated regions in deepfake images.
+
+![Grad-CAM by Model](Figures/gradcam_by_model.png)
+
+>  **CNNs** like ResNet50 and EfficientNet focus more on local texture and edges.  
+>  **Transformers** like ViT and Swin Transformer show broader and more distributed attention across facial regions.  
+>  This highlights differences in spatial bias and generalization strategies between architectures.
+
+
 
