@@ -241,3 +241,15 @@ This visualization compares how different models attend to manipulated regions i
 MSc Data Science – Kingston University London  
 GitHub: [@Hasnain123-rgb](https://github.com/Hasnain123-rgb)  
 Email: hasnainshaikh372@gmail.com
+
+
+---
+
+##  Acknowledgements
+
+-  **Dr. Xing Liang** – Supervisor  
+  *Email:* [X.Liang@kingston.ac.uk](mailto:X.Liang@kingston.ac.uk)
+
+-  **Mr. Nour Badr** – Teaching Assistant
+
+-  **Meraz Jalaluddin Sheikh** – Classmate and collaborator
